@@ -1,18 +1,19 @@
 import pygame
 from obj import Obj
 
+
 class Menu:
 
     def __init__(self):
 
-        self.bg = Obj("assets/start.bng", 0, 0)
+        self.bg = Obj("assets/start.png", 0, 0)
 
-        self.chance_scene = False
+        self.change_scene = False
 
     def draw(self, window):
         self.bg.group.draw(window)
 
     def events(self, event):
-        if event.type == pygame.KEYDOWN:  #se tecla pressionada
-            if event.key == pygame.K_RETURN: #se tecla for enter
-                self.chance_scene = True #chance_scene true, muda a cena
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RETURN:
+                self.change_scene = True
